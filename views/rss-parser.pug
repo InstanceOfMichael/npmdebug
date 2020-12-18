@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  form.form(method='GET')
+    .form-group
+      label URL
+      input.form-control(name='url' value=url)
+    .form-group
+      button.btn.btn-primary(type='submit') Run
+  label url:
+  pre.border.border-secondary.text-monospace url=#{url}
+  label result:
+  pre.border.border-secondary.text-monospace #{result}
